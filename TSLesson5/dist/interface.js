@@ -1,10 +1,29 @@
 "use strict";
-let user1;
-user1 = {
-    name: 'Max',
-    age: 30,
-    greet(phrase) {
-        console.log(phrase + ' ' + this.name);
-    }
+let add;
+add = (n1, n2) => {
+    return n1 + n2;
 };
-user1.greet('Hi There I am Seunggyu');
+class Person {
+    constructor(n) {
+        this.age = 30;
+        this.topic = "Weather";
+        if (n) {
+            this.name = n;
+            n;
+        }
+    }
+    greet(phrase) {
+        if (this.name) {
+            console.log(phrase + '' + this.name);
+        }
+    }
+    talk(phrase) {
+        if (this.topic) {
+            console.log(phrase + '' + this.topic);
+        }
+    }
+}
+let user1;
+user1 = new Person('Seunggyu');
+user1.greet("Hi there ");
+user1.talk("What a great ");
