@@ -25,7 +25,7 @@ abstract class Department {
 
 
     abstract describe(this: Department): void; 
-        //name would not be printed as it wwill only refer to a property within describe() method
+        //name would not be printed as it will only refer to a property within describe() method
         //or it would find "name" proerty in global scope.
         //this case "name" does not throw error because there exists a constant with "name" in global scope.
 
