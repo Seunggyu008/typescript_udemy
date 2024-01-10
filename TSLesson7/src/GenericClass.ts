@@ -1,4 +1,8 @@
 class DataStorage <T extends string | number | boolean> {
+    //union types way:
+    //private data: (string | number | boolean) [] = [];
+    //subsequently change T into string | number | boolean 
+    //however, Union accepts every type of values
     private data: T[] = [];
 
     addItem(item: T) {
